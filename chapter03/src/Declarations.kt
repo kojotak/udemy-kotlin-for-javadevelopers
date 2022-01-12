@@ -52,6 +52,20 @@ fun main(args: Array<String>) {
     //a kdyz chci to co v jave je ==, pouziji ===
     println(employeeOne === employeeTwo)     //false
     println(employeeTwo === employeeThree)   //false
+
+    //misto operator | se pouziva or, misto & se pouziva and
+
+    //casting
+    val something: Any = employeeThree
+    if(something not is Employee){
+        //is misto instanceof
+        val newEmp = something as Employee //udela pretypovani
+    }
+
+    //smartcasting
+    if(something is Employee){
+        val n = something.name //Kotlin po testu povazuje something jako Employee
+    }
 }
 
 class Employee(var name: String, val id: Int){
