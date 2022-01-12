@@ -70,6 +70,13 @@ fun main(args: Array<String>) {
     val change = 4.22
     //kdyz string template nechci, musi se vyescapovat znak $
     println("To show the value of change: \$change is $change")
+
+    //triple quoted strings - nemusim v nich nic escapovat
+    val filePath = """c:\path\to\somewhere"""
+    //da se pouzivat jako viceradkovy string
+    val nurseryRhyme = """Humpty dumpty sat on the wall
+        |Humpty Dumpty had a great fall
+    """.trimMargin() //orizne zacatky radku pro hezke formatovani
 }
 
 class Employee(var name: String, val id: Int){
