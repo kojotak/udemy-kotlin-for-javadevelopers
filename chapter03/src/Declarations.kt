@@ -1,7 +1,6 @@
-
 typealias EmployeeSet = Set<Employee>
 
-fun main() {
+fun main(args: Array<String>) {
     //val je konstantni promenna (value), muzu priradit hodnotu jen jednou
     val number = 25 //prirazenim hodnoty 25 reknu compileru typ
     val number2: Int //deklaruju typ dvojteckou, kdyz zaroven nedelam definici
@@ -39,6 +38,30 @@ fun main() {
     //Kotlin nema klicove slovo static (zustal v bytekodu, ale v koltinu neni)
 
     //Kotlin nema operator new
+
+    val employeeOne = Employee("Mary", 1)
+    val employeeTwo = Employee("John", 2)
+    val employeeThree = Employee("John", 2)
+
+    println(employeeOne == employeeTwo)     //false
+    println(employeeTwo == employeeThree)   //true -> lisi se od javy !!!
+    println(employeeOne.equals(employeeTwo))//false
+    println(employeeTwo.equals(employeeThree))//true
+    //v Kotlinu operator == ve skutecnosti vola equals
+    //takze se v Kotlinu volani equals vubec nepouziva
+    //a kdyz chci to co v jave je ==, pouziji ===
+    println(employeeOne === employeeTwo)     //false
+    println(employeeTwo === employeeThree)   //false
 }
 
-class Employee(var name: String, val id: Int){ }
+class Employee(var name: String, val id: Int){
+    //funkcim ve tride rikame metody
+
+    override fun equals(obj: Any?) : Boolean {
+        if(obj is Employee){
+            //simple and naive
+            return name==obj.name && id == obj.id
+        }
+        return false
+    }
+}
