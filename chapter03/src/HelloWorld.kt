@@ -7,5 +7,5 @@ fun main(args: Array<String>) {
     //je to "top level function", protoze neni ve tride
 
     println("Hello world")
-    //zadne stredniky
+    //zadne stredniky, ale muzu je pouzit
 }
