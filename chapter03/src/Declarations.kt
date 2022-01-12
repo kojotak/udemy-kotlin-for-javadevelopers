@@ -1,3 +1,6 @@
+
+typealias EmployeeSet = Set<Employee>
+
 fun main() {
     //val je konstantni promenna (value), muzu priradit hodnotu jen jednou
     val number = 25 //prirazenim hodnoty 25 reknu compileru typ
@@ -20,6 +23,9 @@ fun main() {
     }else{
         emp2 = Employee("John", 333)
     }//compiler si pohlida, ze prirazeni do emp2 probehne max jednou
+
+    //StringBuilder //je to 'type alias' - ve skutecnosti se pouzije trida z javy
+    val employees: EmployeeSet
 }
 
 class Employee(var name: String, val id: Int){ }
