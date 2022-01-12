@@ -57,7 +57,7 @@ fun main(args: Array<String>) {
 
     //casting
     val something: Any = employeeThree
-    if(something not is Employee){
+    if(something is Employee){
         //is misto instanceof
         val newEmp = something as Employee //udela pretypovani
     }
@@ -66,6 +66,10 @@ fun main(args: Array<String>) {
     if(something is Employee){
         val n = something.name //Kotlin po testu povazuje something jako Employee
     }
+
+    val change = 4.22
+    //kdyz string template nechci, musi se vyescapovat znak $
+    println("To show the value of change: \$change is $change")
 }
 
 class Employee(var name: String, val id: Int){
@@ -78,4 +82,10 @@ class Employee(var name: String, val id: Int){
         }
         return false
     }
+
+    override fun toString(): String {
+        //string template: do $ se dosadi dane atributy
+        return "Employee(name=$name, id=$id)"
+    }
+
 }
