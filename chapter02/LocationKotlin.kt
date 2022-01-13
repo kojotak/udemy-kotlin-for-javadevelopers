@@ -1,4 +1,4 @@
-package com.timbuchalka
+package chapter02
 
 import java.util.HashMap
 

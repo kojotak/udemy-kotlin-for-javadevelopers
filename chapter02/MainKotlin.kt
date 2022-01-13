@@ -1,4 +1,4 @@
-package com.timbuchalka
+package chapter02
 
 fun main(args:Array<String>){
 
