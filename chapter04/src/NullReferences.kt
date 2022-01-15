@@ -45,6 +45,13 @@ fun main(args: Array<String>){
     val anotherStr = "This isn't nullable"
     println(strTest4 == anotherStr) //false, ale zde se neprovede equals
 
+    //////// PART 3 nulls and arrays
+    val nullableInts = arrayOfNulls<Int?>(5)
+    for(i in nullableInts){
+        print(i) //5x null
+    }
+    println()
+    println(nullableInts[3].toString()) //null: sice vim, ze v poli jsou same nully, ale toString se da zavolat nad vsim
 }
 
 fun nullTest(){
