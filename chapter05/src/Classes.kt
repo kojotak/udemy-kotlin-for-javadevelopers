@@ -12,15 +12,6 @@ fun main(args: Array<String>) {
     println(emp3.fullTime)
 }
 
-class Employee (val firstName: String){ //primary constructor
-
-    //have to declare properties from secondary constructor manually
-    var fullTime : Boolean = true
-
-    //this is the secondary constructor
-    constructor(firstName: String, fullTime: Boolean) : this(firstName){
-        // this(firstName) calls the primary constructor
-        // = same situation as in JavaEmployee
-    }
+class Employee (val firstName: String, var fullTime: Boolean = true){
 
 }
