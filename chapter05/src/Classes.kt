@@ -1,5 +1,11 @@
 
+//konstanty - chci val, nikoliv var
+val MY_CONSTANT = 100 //defaultni typ = Int
+
 fun main(args: Array<String>) {
+
+    println("my constant: $MY_CONSTANT")
+
     val emp = Employee("John")
     println(emp)
     emp.fullTime = false
