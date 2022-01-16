@@ -16,9 +16,20 @@ fun main(args: Array<String>) {
     println(Demo().dummy)
 }
 
-//pokud by fullTime byl private, tak v Kotlinu nepujde zmenit
-//ani k tomu nepujde pristoupit pres tecku
-class Employee (val firstName: String, var fullTime: Boolean = true){
+class Employee (val firstName: String, fullTime: Boolean = true){
+
+    //ted je fullTime parametr
+    //a my si rucne vytvorime property
+    //Kotlin ma pouze properties, anebo backing field
+    var fullTime = fullTime
+    get(){
+        println("running the custom get")
+        return field
+    }
+    set(value){
+        println("running the custom set")
+        field = value
+    }
 
 }
 
