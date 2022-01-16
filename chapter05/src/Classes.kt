@@ -7,9 +7,6 @@ fun main(args: Array<String>) {
 class Employee constructor(firstName: String){ //this is declared primary constructor
     //primary constructor doesn't contain code
 
-    val firstName: String
-
-    init { //initialization block
-        this.firstName = firstName
-    }
+    //shorthand for initialization block
+    val firstName: String = firstName
 }
