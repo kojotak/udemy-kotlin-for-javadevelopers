@@ -20,6 +20,25 @@ fun main(args: Array<String>) {
     println(emp3.fullTime)
 
     println(Demo().dummy)
+
+    println("data class demo:")
+    val car = Car("blue","Toyota", 2015)
+    val car2 = Car("blue","Toyota", 2015)
+    val car3 = car.copy(year=2016)
+    println("car: $car, copy $car3")
+
+    val empJohn2 = Employee("John")
+    println("equals Johns ${emp == empJohn2}") //false - defaultne se porovnavaji instance
+    println("equals cars ${car == car2}") //true - defaultne overridnuty equals
+}
+
+//rozdil od klasicke tridy:
+//prepdpripravene equals, hashcody, toString a copy funkce
+//maji desctructuring
+//primary constructor musi mit min. 1 prametr a musi byt vsechny val nebo var
+//muzou byt abstract, sealed ci inner classes
+data class Car(val color: String, val model: String, val year: Int){
+
 }
 
 class Employee (val firstName: String, fullTime: Boolean = true){
