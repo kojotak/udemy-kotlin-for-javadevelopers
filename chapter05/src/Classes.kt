@@ -4,9 +4,8 @@ fun main(args: Array<String>) {
     println(emp)
 }
 
-class Employee constructor(firstName: String){ //this is declared primary constructor
-    //primary constructor doesn't contain code
+class Employee (firstName: String){ //can remove the constructor keyword - it will generate public one
 
-    //shorthand for initialization block
-    val firstName: String = firstName
+    //Kotlin will declare firstName property for us
+
 }
