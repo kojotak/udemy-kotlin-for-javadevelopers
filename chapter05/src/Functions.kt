@@ -4,6 +4,9 @@ fun main(args: Array<String>) : Unit {
     println(labelMultiply(3,4,"The result is: "))
     println(labelMultiply(5,4))
 
+    //can change the order of parameters
+    println(labelMultiply(label="Foo", operand2=2, operand1=1))
+
     val emp = FunEmployee("Jane")
     println("emp: ${emp.upperCaseFirstName()}") //JANE
 
