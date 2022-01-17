@@ -16,6 +16,21 @@ fun main(args: Array<String>) : Unit {
 
     printColors(car1, car2, car3, str = "message")
     //kdyz by vararg byl posledni parametr, nemusel bych pouzit named prameter pro urceni, co je string
+
+    val numbers = arrayOf(1,2,3)
+    val manyCars = arrayOf(car1, car2, car3)
+    printColors(*manyCars, str="foo")//spread operator unpacks an array
+
+    val moreCars = arrayOf(car2, car3)
+    val car4 = Car("yellow", "Skoda", 1986)
+    val lotsOfCars = arrayOf(manyCars, moreCars, car4)
+    for(c in lotsOfCars){
+        //println("lots of cars: $c") //this is wrong, will print arrays
+    }
+    val lotsOfCarsFixed = arrayOf(*manyCars, *moreCars, car4)
+    for(c in lotsOfCarsFixed){
+        println("lots of cars: $c") //fixed
+    }
 }
 
 //function with expression body
