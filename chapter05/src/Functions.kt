@@ -40,7 +40,8 @@ fun main(args: Array<String>) : Unit {
 }
 
 //function with expression body
-fun labelMultiply(operand1: Int, operand2: Int, label : String = "The answer is")  =
+//inline function = works better in lambda expressions, the function's body will be put where function is called
+inline fun labelMultiply(operand1: Int, operand2: Int, label : String = "The answer is")  =
      ("$label ${operand1 * operand2}")
 
 fun whatever() = 3*4
