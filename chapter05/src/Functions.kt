@@ -31,6 +31,12 @@ fun main(args: Array<String>) : Unit {
     for(c in lotsOfCarsFixed){
         println("lots of cars: $c") //fixed
     }
+
+    //utility class
+    val s = "this is some sentence"
+    println(Utils().upperFirstAndLast(s))
+    //extension functions
+    println(s.upperFirstAndLast())//s = receiver object
 }
 
 //function with expression body
@@ -53,3 +59,9 @@ fun printColors(vararg cars: Car, str: String){
     }
 }
 
+//extension function to String
+//there is no parameter... we are using this reference to the string itself
+fun String.upperFirstAndLast(): String {
+    val upperFirst = this.substring(0,1).toUpperCase() + this.substring(1)
+    return upperFirst.substring(0, upperFirst.length-1) + upperFirst.substring(upperFirst.length-1, upperFirst.length).toUpperCase()
+}
