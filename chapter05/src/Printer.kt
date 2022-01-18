@@ -31,13 +31,23 @@ class SpecialLaserPrinter(modelName: String, ppm: Int):LaserPrinter(modelName, p
     //override fun printModel() = println("this is special laser printer: $modelName")
 }
 
-open class Something {
+open class Something: MySubInterface {
     //without primary constructor
 
     val someProperty: String
+    override val number: Int = 25 //for the MySubInterface
+
     constructor(someParameter: String){
         someProperty = someParameter
         println("I'm in the parent's constructor")
+    }
+
+    override fun mySubFunction(num: Int): String {
+        TODO("Not yet implemented")
+    }
+
+    override fun myFunction(str: String): String {
+        TODO("Not yet implemented")
     }
 }
 
@@ -54,3 +64,18 @@ class SomethingElse: Something{
 //the following line can not be compiled
 //open data class DataClass(val number: Int){
 //}
+
+interface MyInterface {
+    fun myFunction(str: String): String
+
+    val number: Int //this is abstract
+
+    //val number2: Int = 42 //can not initialize value, because it have to be abstract
+    val number2: Int
+    get() = number * 100 //how to return a value for abstract property
+}
+
+//no need to declare open, interfaces are always open
+interface MySubInterface: MyInterface{
+    fun mySubFunction(num: Int): String
+}
