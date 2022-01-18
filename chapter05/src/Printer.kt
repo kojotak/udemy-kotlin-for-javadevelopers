@@ -9,10 +9,15 @@ abstract //abstract classes have to be subclassed... so we can delete the open k
 class Printer(val modelName: String) {
 
     open fun printModel() = println("The model name of this printer is $modelName")
+
+    abstract fun bestSellingPrice(): Double
 }
 
 class LaserPrinter(modelName:String): Printer(modelName)   {
 
     //have to declare override... and the overriden function have to be open
     override fun printModel () = println("The model name of this laser printer is $modelName")
+
+    //the overriden function is implicitly open from the abstract keyword
+    override fun bestSellingPrice() : Double = 129.9
 }
