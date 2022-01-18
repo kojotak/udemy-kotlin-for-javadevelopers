@@ -1,7 +1,9 @@
 
 fun main(args: Array<String>){
-    val laserPrinter = LaserPrinter("Brother 134")
+    val laserPrinter = LaserPrinter("Brother 134", 15)
     laserPrinter.printModel()
+
+    SomethingElse("whatever")
 }
 
 open //all classes are final by default in Kotlin, have to mark as open for inheritance
@@ -13,11 +15,42 @@ class Printer(val modelName: String) {
     abstract fun bestSellingPrice(): Double
 }
 
-class LaserPrinter(modelName:String): Printer(modelName)   {
+open class LaserPrinter(modelName:String, ppm: Int): Printer(modelName)   {
 
     //have to declare override... and the overriden function have to be open
-    override fun printModel () = println("The model name of this laser printer is $modelName")
+    final override fun printModel () = println("The model name of this laser printer is $modelName")
 
     //the overriden function is implicitly open from the abstract keyword
+    //all fuctions with override are automaticlly open as well
     override fun bestSellingPrice() : Double = 129.9
 }
+
+class SpecialLaserPrinter(modelName: String, ppm: Int):LaserPrinter(modelName, ppm){
+
+    //can not override, printModel is final!
+    //override fun printModel() = println("this is special laser printer: $modelName")
+}
+
+open class Something {
+    //without primary constructor
+
+    val someProperty: String
+    constructor(someParameter: String){
+        someProperty = someParameter
+        println("I'm in the parent's constructor")
+    }
+}
+
+class SomethingElse: Something{
+
+    //we can do this only when there is no primary constructor
+    //because primary constructor have to be called
+    constructor(someOtherParameter: String): super(someOtherParameter){
+        println("I'm in the child's constructor")
+    }
+}
+
+//data classes can not be extended, so it can not be open
+//the following line can not be compiled
+//open data class DataClass(val number: Int){
+//}
