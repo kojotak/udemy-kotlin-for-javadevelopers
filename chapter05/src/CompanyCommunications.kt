@@ -4,10 +4,15 @@ fun main(ars: Array<String>){
     println(CompanyCommunications.getTagLine())
     println(CompanyCommunications.getCopyrightLine())
     println(SomeClass.SOME.accessPrivateVar())
+
     val s1 = SomeClass.justAssign("foo bar")
     val s2 = SomeClass.upperOrLoweCase("foo bar", false)
     println(s1.someString)
     println(s2.someString)
+
+    wantsSomeInterface(object: SomeInterface{
+        override fun mustImplement(num: Int) = "This is from anonymous object $num"
+    })
 }
 
 //no class keyword here
@@ -44,5 +49,12 @@ class SomeClass private constructor(val someString: String) {
             }
         }
     }
+}
 
+interface SomeInterface {
+    fun mustImplement(num: Int):  String
+}
+
+fun wantsSomeInterface(si: SomeInterface){
+    println("Printing from wantsSomeInterface ${si.mustImplement(42)}")
 }
