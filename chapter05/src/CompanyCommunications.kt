@@ -13,6 +13,8 @@ fun main(ars: Array<String>){
     wantsSomeInterface(object: SomeInterface{
         override fun mustImplement(num: Int) = "This is from anonymous object $num"
     })
+
+    println(Department.IT.getInfo())
 }
 
 //no class keyword here
@@ -57,4 +59,15 @@ interface SomeInterface {
 
 fun wantsSomeInterface(si: SomeInterface){
     println("Printing from wantsSomeInterface ${si.mustImplement(42)}")
+}
+
+//need class keyword here
+enum class Department(val fullName: String, val numOfEmps: Int) {
+    HR("human resources", 5),
+    IT("information technology", 10),
+    SALES("sales", 15)
+
+    ; //! need semicolumn here for the following fun...
+
+    fun getInfo() = "The $fullName has $numOfEmps employees"
 }
