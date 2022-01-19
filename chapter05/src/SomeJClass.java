@@ -1,9 +1,9 @@
-public class SomeClass {
+public class SomeJClass {
 
     private static int privateVar = 6;
 
     public static void main(String[] args){
-        new SomeOtherClass().someOtherMethod();
+        new SomeJOtherClass().someOtherMethod();
     }
 
     public static void accessPrivateVar(){
