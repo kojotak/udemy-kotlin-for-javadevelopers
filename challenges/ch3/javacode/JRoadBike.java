@@ -17,4 +17,9 @@ public class JRoadBike extends JBicycle {
         return tireWidth;
     }
 
+    @Override
+    public void printDescription() {
+        super.printDescription();
+        System.out.println("The road bike has a tire widtg of " + tireWidth + " MM");
+    }
 }
