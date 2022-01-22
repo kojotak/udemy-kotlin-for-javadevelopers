@@ -8,4 +8,4 @@ class RoadBike(
     gear: Int,
     // In millimetres
     val tireWidth: Int
-) : JBicycle(cadence, speed, gear)
+) : KBicycle(cadence, speed, gear)

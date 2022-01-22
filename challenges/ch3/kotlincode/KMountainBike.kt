@@ -7,4 +7,4 @@ class JMountainBike(
     cadence: Int,
     speed: Int,
     gear: Int
-) : JBicycle(cadence, speed, gear)
+) : KBicycle(cadence, speed, gear)
