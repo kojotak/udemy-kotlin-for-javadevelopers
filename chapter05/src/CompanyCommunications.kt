@@ -1,6 +1,7 @@
 import java.time.Year
 
 fun main(ars: Array<String>){
+    topLevel("I'm private")
     println(CompanyCommunications.getTagLine())
     println(CompanyCommunications.getCopyrightLine())
     println(SomeClass.SOME.accessPrivateVar())
@@ -16,6 +17,8 @@ fun main(ars: Array<String>){
 
     println(Department.IT.getInfo())
 }
+
+fun topLevel(str: String) = println("Top level function: $str")
 
 //no class keyword here
 //can extend other interfaces
