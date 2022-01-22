@@ -12,7 +12,6 @@ fun main(args: Array<String>){
     road.printDescription()
     mountain.printDescription()
 
-
     println("now using default gear...")
 
     val bicycle2 = KBicycle(80, 20)
@@ -23,10 +22,15 @@ fun main(args: Array<String>){
     road2.printDescription()
     mountain2.printDescription()
 
+    println("now using secondary constructor with color...")
+
     val mountain3 = KMountainBike(5, 90, 30, 24,"blue")
     mountain3.printDescription()
 
     //used default gear
     val mountain4 = KMountainBike(8, 88, 28, color ="green")
     mountain4.printDescription()
+
+    println("now using companion object with colors:")
+    KMountainBike.availableColors.forEach { println(it) }
 }

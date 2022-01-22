@@ -20,4 +20,8 @@ class KMountainBike(
         this(seatHeight, cadence, speed,gear){
         println("This is color $color")
     }
+
+    companion object {
+        val availableColors = listOf("blue", "red", "green", "black", "yellow")
+    }
 }
