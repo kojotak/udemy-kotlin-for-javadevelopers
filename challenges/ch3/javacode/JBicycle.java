@@ -1,12 +1,12 @@
-package challenges.javacode;
+package challenges.ch3.javacode;
 
-public class Bicycle {
+public class JBicycle {
 
     private int cadence;
     private int gear;
     private int speed;
 
-    public Bicycle(int cadence, int speed, int gear) {
+    public JBicycle(int cadence, int speed, int gear) {
         this.gear = gear;
         this.cadence = cadence;
         this.speed = speed;
