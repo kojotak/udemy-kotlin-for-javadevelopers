@@ -1,8 +1,6 @@
 package challenges.ch3.kotlincode
 
-import challenges.ch3.javacode.JBicycle
-
-class JMountainBike(
+class KMountainBike(
     //var... we are adding new property and we have getter and setter in java
     var seatHeight: Int,
 

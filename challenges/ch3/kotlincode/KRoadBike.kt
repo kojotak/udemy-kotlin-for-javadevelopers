@@ -1,6 +1,6 @@
 package challenges.ch3.kotlincode
 
-class RoadBike(
+class KRoadBike(
     cadence: Int,
     speed: Int,
     gear: Int,
