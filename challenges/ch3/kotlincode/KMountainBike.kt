@@ -14,4 +14,10 @@ class KMountainBike(
         super.printDescription()
         println("The mountain bike has a seat height of $seatHeight inches")
     }
+
+    //add color as new property using secondary constructor
+    constructor(seatHeight: Int, cadence: Int, speed: Int, gear: Int = 10, color: String):
+        this(seatHeight, cadence, speed,gear){
+        println("This is color $color")
+    }
 }

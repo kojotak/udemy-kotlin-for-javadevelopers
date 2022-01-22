@@ -22,4 +22,11 @@ fun main(args: Array<String>){
     bicycle2.printDescription()
     road2.printDescription()
     mountain2.printDescription()
+
+    val mountain3 = KMountainBike(5, 90, 30, 24,"blue")
+    mountain3.printDescription()
+
+    //used default gear
+    val mountain4 = KMountainBike(8, 88, 28, color ="green")
+    mountain4.printDescription()
 }
