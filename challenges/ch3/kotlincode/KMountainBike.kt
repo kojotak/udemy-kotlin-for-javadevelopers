@@ -7,7 +7,7 @@ class KMountainBike(
     //cadence, speed and gear are passed to super class
     cadence: Int,
     speed: Int,
-    gear: Int
+    gear: Int = 10
 ) : KBicycle(cadence, speed, gear){
 
     override fun printDescription() {
