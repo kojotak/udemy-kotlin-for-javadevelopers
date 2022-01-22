@@ -10,4 +10,10 @@ class JMountainBike(
     cadence: Int,
     speed: Int,
     gear: Int
-) : KBicycle(cadence, speed, gear)
+) : KBicycle(cadence, speed, gear){
+
+    override fun printDescription() {
+        super.printDescription()
+        println("The mountain bike has a seat height of $seatHeight inches")
+    }
+}

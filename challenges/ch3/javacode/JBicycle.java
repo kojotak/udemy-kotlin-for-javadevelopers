@@ -44,5 +44,12 @@ public class JBicycle {
         speed += increment;
     }
 
+    public void printDescription(){
+        System.out.println("Bicycle is in gear " + gear
+                + " with cadence of " + cadence
+                + " travelling at a speed of " + speed
+                + "."
+        );
+    }
 
 }
