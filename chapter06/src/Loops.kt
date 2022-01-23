@@ -60,5 +60,30 @@ fun main(args: Array<String>){
     for(i in 1 until 10){
         print("$i ") //1 2 ... 8 9 - bez 10
     }
+    println("for loops and arrays ... ")
+    val seasons = arrayOf("spring","summer","winter","fall")
+    for(season in seasons){
+        print("$season ")
+    }
     println()
+    val notASeason = "whatever" !in seasons
+    println("not a season? $notASeason")
+    for(idx in seasons.indices){
+        print("#$idx = ${seasons[idx]} ") //#0 = spring #1 = summer....
+    }
+    println()
+    seasons.forEach {  print("$it ") } //spring summer winter fall
+    seasons.forEachIndexed { index,value -> print("$value is season number $index, ")}
+    println()
+    for(i in 1..3){
+        print("i = $i ")
+        jloop@ for(j in 1..4){ //named loop
+            print("j = $j ")
+            if( j == 2){
+                break@jloop;
+                //continue@jloop
+            }
+        }
+        println()
+    }
 }
