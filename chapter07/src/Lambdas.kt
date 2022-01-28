@@ -7,6 +7,7 @@ fun main(ars: Array<String>){
                             Employee("Mary", "Johnson", 2010),
                             Employee("Mike", "Jones", 2002))
 
+    //ekvivalentni zapisy
     //println( employees.minByOrNull { e->e.startYear}) //Mike Jones
     //println( employees.minByOrNull { e : Employee ->e.startYear}) //can specify type
     //println( employees.minByOrNull { it.startYear}) //it... the default argument
@@ -19,9 +20,30 @@ fun main(ars: Array<String>){
     }
 
     run(::topLevel)
+
+    findByLastName(employees, "Wilson")
+    findByLastName(employees, "Smithson")
+
+    "Some string".apply outer@ { //labelem si oznacim lambdu
+        "Another string".apply {
+            println(toLowerCase()) //nemusim psat this... je to ten vnitrni this, tj. another string
+            println(this@outer.toUpperCase()) //SOME STRING
+        }
+    }
 }
 
-fun topLevel() = print("I am in a function")
+fun findByLastName(employees: List<Employee>, lastName: String){
+    employees.forEach returnBlock@ {
+        if(it.lastName ==lastName){
+            println("Yes, there is an employee with last name $lastName")
+            //return@returnBlock //vrati se na returnBlock... ale to nechceme
+            return //ukonci jak lambdu pro forEach, ale i funkcni
+        }
+    }
+    println("No, there is no employee with last name $lastName")
+}
+
+fun topLevel() = println("I am in a function")
 
 fun useParameter(employes : List<Employee>, num: Int) {
     employes.forEach{
