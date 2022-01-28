@@ -54,3 +54,12 @@ fun countTo100v4() = with(StringBuilder()) {
     append(100)
     toString()
 }
+
+//jeste muzeme pouzit apply misto with - nefunguje <>
+//fun countTo100v5() = StringBuilder.apply(){
+//    for(i in 1..99) {
+//        append(i)
+//        append(", ")
+//    }
+//    append(100)
+//}.toString()
