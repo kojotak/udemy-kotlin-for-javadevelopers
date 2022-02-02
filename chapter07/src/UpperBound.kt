@@ -18,6 +18,23 @@ fun main(ars: Array<String>){
     ints.printCollection()//1 2 3 4 5
     shorts.printCollection()//10 20 30 40
 
+    /////// type erasure
+    if(strings is List<String>){
+        println("this list contains strings")//this list contains strings
+    }
+
+    var listAny: Any = listOf("foo","bar")
+    //if(listAny is List<String>){ } //compiler does not allow to check this
+
+    //star projection syntax
+    if(listAny is List<*>){//nemuzu dat 'strings is List" bez typu, tak tam dam hvezdicku
+        println("yes, this is a list...")
+
+        //listAny = listOf(1,2,3)//lass java.lang.Integer cannot be cast to class java.lang.String
+
+        val strList = listAny as List<String>
+        println(strList[0].toUpperCase())//FOO
+    }
 }
 
 //bounded parameter - Numbers only, but can be null
