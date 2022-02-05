@@ -1,4 +1,4 @@
-package challenges.ch3.kotlincode
+package challenges.ch6.kotlincode
 
 class KMountainBike(
     //var... we are adding new property and we have getter and setter in java

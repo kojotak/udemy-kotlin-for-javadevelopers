@@ -1,4 +1,4 @@
-package challenges.ch3.kotlincode
+package challenges.ch6.kotlincode
 
 class KRoadBike(
     // In millimetres

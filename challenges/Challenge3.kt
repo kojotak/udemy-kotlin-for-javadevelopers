@@ -1,36 +1,34 @@
 package challenges
 
-import challenges.ch3.kotlincode.*
-
 fun main(args: Array<String>){
 
-    val bicycle = KBicycle(80, 20, 15)
-    val road = KRoadBike(4,70, 15,18)
-    val mountain = KMountainBike(5, 90, 30, 21)
+    //declare two immutable strings 'Hello'
+    val hello1 = "Hello"
+    val hello2 = "Hello"
 
-    bicycle.printDescription()
-    road.printDescription()
-    mountain.printDescription()
+    println(hello1 === hello2) //print referential equal
 
-    println("now using default gear...")
+    println(hello1 == hello2)  //print structurally equal
 
-    val bicycle2 = KBicycle(80, 20)
-    val road2 = KRoadBike(3, 70, 15)
-    val mountain2 = KMountainBike(5, 90, 30)
+    //declare mutable variable
+    var number = 2988
 
-    bicycle2.printDescription()
-    road2.printDescription()
-    mountain2.printDescription()
+    //declare immutable variable of type Any and cast it to upper cased string
+    val anyString : Any = "The any type is the root of Kotlin class hierarchy"
+    if(anyString is String){
+        println( anyString.toUpperCase())
+    }
 
-    println("now using secondary constructor with color...")
-
-    val mountain3 = KMountainBike(5, 90, 30, 24,"blue")
-    mountain3.printDescription()
-
-    //used default gear
-    val mountain4 = KMountainBike(8, 88, 28, color ="green")
-    mountain4.printDescription()
-
-    println("now using companion object with colors:")
-    KMountainBike.availableColors.forEach { println(it) }
+    //oneliner to print:
+    //     1
+    //    11
+    //   111
+    //  1111
+    val oneliner = """
+    |     1
+    |    11
+    |   111
+    |  1111   
+    """.trimMargin()
+    println(oneliner)
 }

@@ -1,4 +1,4 @@
-package challenges.ch3.javacode;
+package challenges.ch6.javacode;
 
 public class JRoadBike extends JBicycle {
 

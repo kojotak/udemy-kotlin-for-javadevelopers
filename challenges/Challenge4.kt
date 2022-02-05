@@ -1,26 +1,49 @@
 package challenges
 
-fun main(ars: Array<String>){
+fun main(args: Array<String>) {
 
-    //print 5,10,...5000
-    for(i in 5..5000 step 5){
-        print("$i ")
-    }
-    println()
+    // 1. Declare a non-nullable float variable two ways,
+    // and assign it the value -3847.384
+    var fvar : Float = -3847.384F
+    var fvar2: Float
+    fvar2 = -3847.384F
 
-    //negative range
-    for(i in -500..0){
-        print("$i ")
-    }
-    println()
+    // 2. Now change both of those variable declarations into nullable variables.
+    var fvarN : Float? = -3847.384F
+    var fvarN2: Float?
+    fvar2 = -3847.384F
 
-    //first 15 numbers fibonacci: 0,1,1,2,3,5,...
-    val fibonacci = Array(15){0}
-    fibonacci[1]=1
-    for(i in 2 until fibonacci.size){
-        fibonacci[i] = fibonacci[i-1] + fibonacci[i-2]
-    }
-    fibonacci.forEach { print("$it ") }
+    // 3. Now declare an array of type non-nullable Short. Make it size 5,
+    // and assign it the values 1, 2, 3, 4, and 5.
+    var arr : Array<Short> = arrayOf(1,2,3,4,5)
 
-    //skipped the last two "challenges"
+    // 4. Now declare an array of nullable Ints and initialize it with the values
+    // 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, etc., all the way up to 200.
+    var ints = Array<Int?> (40) { i-> 5 * (i+1) }
+
+    // 5. You have to call a Java method with the following signature from Kotlin:
+    // public void method1(char[] charArray). Declare an array that you could
+    // pass to the method and initialize it with the values 'a', 'b', and 'c'.
+    var charArray = charArrayOf('a','b','c')
+
+    // 6. Given the following code:
+    val x: String? = "I AM IN UPPERCASE"
+    // Using one line of code, declare another string variable,
+    // and assign it x.toLowerCase() when x isn't null,
+    // and the string "I give up!" when x is null.
+    var another = x?.toLowerCase() ?: "I give up!"
+
+    // 7. Now use the let function to (a) lowercase the string, and then
+    // (b) replace "am" with "am not" in the result
+    x?.let { it.toLowerCase().replace("am","am not") }
+
+    // 8. You're really, really confident that the variable myNonNullVariable can't
+    // contain null.
+    // Change the following code to assert that myNonNullVariable isn't null
+    // (and shoot yourself in the foot!)
+    val myNonNullVariable: Int? = null
+    myNonNullVariable!!.toDouble()
+
 }
+
+
