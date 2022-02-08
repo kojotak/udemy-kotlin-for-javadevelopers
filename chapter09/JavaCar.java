@@ -8,6 +8,7 @@ public class JavaCar {
     private String color;
     private String model;
     private int year;
+    private Object anObject;
 
     public JavaCar(String color, String model, int year) {
         this.color = color;
@@ -40,6 +41,18 @@ public class JavaCar {
         this.year = year;
     }
 
+    public Object getAnObject() {
+        return anObject;
+    }
+
+    public void setAnObject(Object anObject) {
+        this.anObject = anObject;
+    }
+
+    public static String getStaticX(){
+        return "X";
+    }
+
     @Override
     public String toString() {
         return "JavaCar{" +
@@ -47,5 +60,11 @@ public class JavaCar {
                 ", model='" + model + '\'' +
                 ", year=" + year +
                 '}';
+    }
+
+    public void variableMethod(int num, String...strings){
+        for(String str : strings){
+            System.out.println("" + num + " - " + str);
+        }
     }
 }

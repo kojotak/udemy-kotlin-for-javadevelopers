@@ -14,6 +14,15 @@ fun main(args:Array<String>){
     model = null
     println(model)//null
 
+    //call java's vararg from kotlin
+    car.variableMethod(5, "hello")//5 - hello
 
+    val strings = arrayOf("foo","bar") //can not use Kotlin's array in Java's vararg
+    //car.variableMethod(42, strings)  //Required: String! Found:Array<String>
 
+    //how to access java objects...
+    //(car.anObject as java.lang.Object).notify()
+
+    //access static java... as usual
+    println(JavaCar.getStaticX()) //X
 }
