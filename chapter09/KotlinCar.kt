@@ -14,6 +14,8 @@ class KotlinCar(val color: String, @JvmField val model: String, val year: Int) {
 
 object SingletonObject {
     fun doSomething() = println("i am in singleton")
+
+    @JvmStatic fun doSomething2() = println("i am in anotated singleton method")
 }
 
 //example extension function

@@ -81,5 +81,7 @@ public class JavaCar {
 
         //INSTANCE is generated field to access Kotlin's singletons
         SingletonObject.INSTANCE.doSomething();//i am in singleton
+        //we can get rid of the INSTANCE if we annotate Kotlin's source code with @JvmStatic
+        SingletonObject.doSomething2();//i am in anotated singleton method
     }
 }
