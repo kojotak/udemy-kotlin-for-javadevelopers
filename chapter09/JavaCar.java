@@ -77,5 +77,6 @@ public class JavaCar {
         System.out.println(car);//chapter09.KotlinCar@6d311334
         System.out.println(car.model); //BMW, because    @JvmField
         System.out.println(car.getColor()); //blue - generated getter
+        System.out.println(KotlinCar.carComp());//i am companion fun
     }
 }
