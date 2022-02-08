@@ -67,4 +67,10 @@ public class JavaCar {
             System.out.println("" + num + " - " + str);
         }
     }
+
+    public static void main(String... args){
+        StaticCar.topLevel();//I am top level function in car file
+
+        //! but we can not call Kotlin's extension funcion String.extendedPrint
+    }
 }
