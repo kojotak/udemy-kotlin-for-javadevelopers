@@ -72,5 +72,8 @@ public class JavaCar {
         StaticCar.topLevel();//I am top level function in car file
 
         //! but we can not call Kotlin's extension funcion String.extendedPrint
+
+        KotlinCar car = new KotlinCar();
+        System.out.println(car);//chapter09.KotlinCar@6d311334
     }
 }
