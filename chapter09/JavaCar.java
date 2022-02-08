@@ -78,5 +78,8 @@ public class JavaCar {
         System.out.println(car.model); //BMW, because    @JvmField
         System.out.println(car.getColor()); //blue - generated getter
         System.out.println(KotlinCar.carComp());//i am companion fun
+
+        //INSTANCE is generated field to access Kotlin's singletons
+        SingletonObject.INSTANCE.doSomething();//i am in singleton
     }
 }

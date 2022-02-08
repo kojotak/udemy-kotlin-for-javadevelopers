@@ -12,6 +12,10 @@ class KotlinCar(val color: String, @JvmField val model: String, val year: Int) {
 
 }
 
+object SingletonObject {
+    fun doSomething() = println("i am in singleton")
+}
+
 //example extension function
 fun String.extendedPrint() {
     println(this)
