@@ -73,7 +73,9 @@ public class JavaCar {
 
         //! but we can not call Kotlin's extension funcion String.extendedPrint
 
-        KotlinCar car = new KotlinCar();
+        KotlinCar car = new KotlinCar("blue","BMW", 2020);
         System.out.println(car);//chapter09.KotlinCar@6d311334
+        System.out.println(car.model); //BMW, because    @JvmField
+        System.out.println(car.getColor()); //blue - generated getter
     }
 }
