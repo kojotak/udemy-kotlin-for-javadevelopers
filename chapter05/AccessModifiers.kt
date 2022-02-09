@@ -1,4 +1,4 @@
-
+package chapter05
 //top level modifier is public by default in Kotlin (vs package in java)
 //Kotlin checkes access modifiers at compile time, because they are compiled into java's byte code
 fun main(args: Array<String>) {

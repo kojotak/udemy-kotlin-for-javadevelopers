@@ -1,3 +1,5 @@
+import chapter04.javaCode.Dummy
+
 fun main(args: Array<String>){
     var myInt = 10 //integer
     var myLong = 42L //long

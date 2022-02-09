@@ -1,3 +1,5 @@
+package chapter05;
+
 public class JavaEmployee {
 
     private final String firstName;

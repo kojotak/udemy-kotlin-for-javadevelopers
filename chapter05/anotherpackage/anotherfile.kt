@@ -1,7 +1,9 @@
 package anotherpackage
 
-import whatever //imports a file
-import upperFirstAndLast //imports a function
+import chapter05.CompanyCommunications
+import chapter05.Department
+import chapter05.whatever //imports a file
+import chapter05.upperFirstAndLast //imports a function
 
 fun main(args:Array<String>){
     println("using function from other package: ${whatever()}")

@@ -1,5 +1,5 @@
 //it doesn't have to match directory structure...
-package foo.bar.baz
+package chapter05
 
 import chapter02.LocationKotlin //have to add dependency to another module in chater05.iml
 

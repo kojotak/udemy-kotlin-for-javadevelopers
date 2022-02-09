@@ -1,17 +1,19 @@
+package chapter05
+
 import java.time.Year
 
 fun main(ars: Array<String>){
     topLevel("I'm private")
     println(CompanyCommunications.getTagLine())
     println(CompanyCommunications.getCopyrightLine())
-    println(SomeClass.SOME.accessPrivateVar())
+    println(SomeClass.accessPrivateVar())
 
     val s1 = SomeClass.justAssign("foo bar")
     val s2 = SomeClass.upperOrLoweCase("foo bar", false)
     println(s1.someString)
     println(s2.someString)
 
-    wantsSomeInterface(object: SomeInterface{
+    wantsSomeInterface(object: SomeInterface {
         override fun mustImplement(num: Int) = "This is from anonymous object $num"
     })
 
@@ -61,7 +63,7 @@ interface SomeInterface {
 }
 
 fun wantsSomeInterface(si: SomeInterface){
-    println("Printing from wantsSomeInterface ${si.mustImplement(42)}")
+    println("Printing from chapter05.wantsSomeInterface ${si.mustImplement(42)}")
 }
 
 //need class keyword here

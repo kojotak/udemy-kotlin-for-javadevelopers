@@ -1,4 +1,4 @@
-
+package chapter05
 //konstanty - chci val, nikoliv var
 val MY_CONSTANT = 100 //defaultni typ = Int
 

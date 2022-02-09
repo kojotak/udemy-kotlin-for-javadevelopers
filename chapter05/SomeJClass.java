@@ -1,3 +1,5 @@
+package chapter05;
+
 public class SomeJClass {
 
     private static int privateVar = 6;

@@ -1,3 +1,5 @@
+package chapter06
+
 import java.math.BigDecimal
 
 fun main(ars: Array<String>){

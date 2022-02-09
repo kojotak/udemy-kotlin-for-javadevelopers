@@ -1,3 +1,5 @@
+package chapter03
+
 typealias EmployeeSet = Set<Employee>
 
 fun main(args: Array<String>) {
@@ -14,7 +16,7 @@ fun main(args: Array<String>) {
 
     val emp1 = Employee("Lynn", 500)
     emp1.name = "Flynn" //val nezabrani menit obsah
-    //emp1 = Employee("Tim", 600) //tohle nejde, emp1 je val
+    //emp1 = chapter05.Employee("Tim", 600) //tohle nejde, emp1 je val
 
     val emp2 : Employee
     if(number < number3){
@@ -64,7 +66,7 @@ fun main(args: Array<String>) {
 
     //smartcasting
     if(something is Employee){
-        val n = something.name //Kotlin po testu povazuje something jako Employee
+        val n = something.name //Kotlin po testu povazuje something jako chapter05.Employee
     }
 
     val change = 4.22
@@ -92,7 +94,7 @@ class Employee(var name: String, val id: Int){
 
     override fun toString(): String {
         //string template: do $ se dosadi dane atributy
-        return "Employee(name=$name, id=$id)"
+        return "chapter05.Employee(name=$name, id=$id)"
     }
 
 }

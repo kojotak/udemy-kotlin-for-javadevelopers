@@ -1,9 +1,9 @@
-
+package chapter05
 fun main(args: Array<String>){
     val laserPrinter = LaserPrinter("Brother 134", 15)
     laserPrinter.printModel()
 
-    SomethingElse("whatever")
+    SomethingElse("chapter05.whatever")
 }
 
 open //all classes are final by default in Kotlin, have to mark as open for inheritance
@@ -25,7 +25,7 @@ open class LaserPrinter(modelName:String, ppm: Int): Printer(modelName)   {
     override fun bestSellingPrice() : Double = 129.9
 }
 
-class SpecialLaserPrinter(modelName: String, ppm: Int):LaserPrinter(modelName, ppm){
+class SpecialLaserPrinter(modelName: String, ppm: Int): LaserPrinter(modelName, ppm){
 
     //can not override, printModel is final!
     //override fun printModel() = println("this is special laser printer: $modelName")
@@ -35,7 +35,7 @@ open class Something: MySubInterface {
     //without primary constructor
 
     val someProperty: String
-    override val number: Int = 25 //for the MySubInterface
+    override val number: Int = 25 //for the chapter05.MySubInterface
 
     constructor(someParameter: String){
         someProperty = someParameter
@@ -51,7 +51,7 @@ open class Something: MySubInterface {
     }
 }
 
-class SomethingElse: Something{
+class SomethingElse: Something {
 
     //we can do this only when there is no primary constructor
     //because primary constructor have to be called
@@ -76,6 +76,6 @@ interface MyInterface {
 }
 
 //no need to declare open, interfaces are always open
-interface MySubInterface: MyInterface{
+interface MySubInterface: MyInterface {
     fun mySubFunction(num: Int): String
 }

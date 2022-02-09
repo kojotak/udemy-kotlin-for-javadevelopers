@@ -1,3 +1,5 @@
+package chapter05
+
 class Utils{
 
     fun upperFirstAndLast(str: String): String {
